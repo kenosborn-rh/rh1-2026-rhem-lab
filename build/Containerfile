@@ -1,9 +1,6 @@
 FROM registry.redhat.io/rhel9-eus/rhel-9.6-bootc:9.6
 
-# Add flightctl repo (this is necessary because we are using Satellite in the RHDP environment)
-COPY flightctl-el9.repo /etc/yum.repos.d/flightctl-el9.repo
-
-# Install Edge Manager Agent (pinned)
+# Install Edge Manager Agent
 RUN dnf -y install flightctl-agent-1.0.0~rc3-1.el9 && \
     dnf -y clean all && \
     systemctl enable flightctl-agent.service && \
