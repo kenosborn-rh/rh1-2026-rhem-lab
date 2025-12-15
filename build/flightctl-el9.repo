@@ -1,0 +1,6 @@
+[flightctl-el9]
+name=flightctl-el9
+baseurl=https://demosat-capsule-00.infra.demo.redhat.com/pulp/content/Red_Hat_RHDP_Labs/Library/rh1-flightctl-lb8580/custom/flightctl_edge_manager_/flightctl
+enabled=1
+gpgcheck=0
+sslverify=0
