@@ -1,9 +1,9 @@
 FROM registry.redhat.io/rhel9-eus/rhel-9.6-bootc:9.6
 
 # Install Edge Manager Agent
-RUN dnf -y install flightctl-agent-0:1.0.0~rc3-1.el9.x86_64 \
-    --enablerepo=Red_Hat_RHDP_Labs_flightctl_edge_manager__flightctl && \
-    dnf -y clean all && \
+RUN dnf config-manager --add-repo https://rpm.flightctl.io/flightctl-lab.repo && \
+    dnf clean all && \
+    dnf -y install flightctl-agent-0:1.1.0~main~118~g55455431.lab-1.el9.x86_64 && \
     systemctl enable flightctl-agent.service && \
     systemctl mask bootc-fetch-apply-updates.timer
 
