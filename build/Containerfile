@@ -11,4 +11,4 @@ RUN dnf config-manager --add-repo https://rpm.flightctl.io/flightctl-lab.repo &&
 COPY config.yaml /etc/flightctl/config.yaml
 
 # DO NOT DO THIS IN PRODUCTION ENVIRONMENTS (for lab troubleshooting only)
-RUN echo "root:!redhat123" | chpasswd
+RUN echo "root:redhat123" | chpasswd
