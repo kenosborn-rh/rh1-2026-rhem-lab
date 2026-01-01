@@ -1,18 +1,18 @@
-apiVersion: flightctl.io/v1alpha1
+apiVersion: flightctl.io/v1beta1
 kind: Fleet
 metadata:
   labels: {}
-  name: test-fleet
+  name: gitea-fleet
 spec:
   selector:
     matchLabels:
-      fleet: test
+      fleet: gitea
   template:
     metadata:
       labels:
-        fleet: test-fleet
+        fleet: gitea-fleet
     spec:
       applications: []
       config: []
       os:
-        image: quay.io/kenosborn/drone-image:v1
+        image: quay.io/user/drone-image:v1
