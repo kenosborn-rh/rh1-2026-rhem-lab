@@ -3,6 +3,7 @@ kind: Fleet
 metadata:
   labels: {}
   name: test-fleet
+  owner: ResourceSync/user-rs
 spec:
   selector:
     matchLabels:
