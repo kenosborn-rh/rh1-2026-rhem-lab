@@ -12,7 +12,7 @@ spec:
       labels:
         fleet: gitea-fleet
     spec:
-      applications: {}
-      config: {}
+      applications: []
+      config: []
       os:
         image: quay.io/user/drone-image:v1
