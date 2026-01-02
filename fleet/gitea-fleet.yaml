@@ -26,7 +26,7 @@ spec:
                         - path: app.container
                           content: |
                             [Container]
-                            Image=registry.redhat.io/ubi9/nginx-124
+                            Image=docker.io/library/nginx:1.25
                             Exec=nginx -g "daemon off;"
                             PublishPort=8080:80
                             Volume=/etc/drone-tracker:/usr/share/nginx/html:ro,Z
