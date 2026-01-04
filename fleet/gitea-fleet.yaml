@@ -13,6 +13,4 @@ spec:
         fleet: gitea-fleet
     spec:
       applications: []
-      config: []
-      os: []
-        
+      config: []        
